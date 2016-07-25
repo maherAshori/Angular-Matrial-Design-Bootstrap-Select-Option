@@ -11,12 +11,81 @@
 
 <body>
   
-<div class="container" style="margin-top: 100px">
-<div class="col-md-4 col-md-offset-4">
-<mdb-select ng-model="select" data-label="movies" data-list="array" data-model="score" ng-change="get(select)" data-bind="name"></mdb-select>
-{{select}}
-</div>
-</div>
+<div class="container">
+        <div class="page-header">
+            <b>Select Option Samples</b>
+        </div>
+
+        <div class="col-md-6">
+            <div class="page-header">
+                <b>Single Bind</b>
+                <small>return object</small>
+            </div>
+            <mdb-select ng-model="select"
+                        data-label="Movies"
+                        data-list="array"
+                        data-bind="name"></mdb-select>
+            <hr/>
+            <div class="well">
+                select : {{select}}
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="page-header">
+                <b>Single Bind</b>
+                <small>return score</small>
+            </div>
+            <mdb-select ng-model="select2"
+                        data-label="Movies"
+                        data-list="array"
+                        data-model="score"
+                        data-bind="name"></mdb-select>
+            <hr/>
+            <div class="well">
+                select : {{select2}}
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="page-header">
+                <b>Single Bind</b>
+                <small>default Value & return name</small>
+            </div>
+            <mdb-select ng-model="select3"
+                        data-label="Movies"
+                        data-list="array"
+                        data-model="name"
+                        data-bind="name"></mdb-select>
+            <hr/>
+            <div class="well">
+                select : {{select3}}
+                <hr/>
+                $scope.select3 = $scope.array[0];
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="page-header">
+                <b>Multi Bind</b>
+                <small>bind name and score</small>
+            </div>
+            <mdb-select ng-model="select4"
+                        data-label="Movies"
+                        data-list="array"
+                        data-model="name"
+                        data-multi-bind="['name','score']"></mdb-select>
+            <hr />
+            <div class="well">
+                select : {{select4}}
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="javascripts/angular-mdb-select.min.js"></script>
@@ -27,15 +96,14 @@
             $scope.array = [
                 { name: "The Shawshank Redemption", score: 10, code: 1 },
                 { name: "The Godfather", score: 9, code: 2 },
-                { name: "The Dark Knight", last: 8, code: 3 },
+                { name: "The Dark Knight", score: 8, code: 3 },
                 { name: "Pulp Fiction", score: 5, code: 4 },
                 { name: "Fight Club", score: 7, code: 5 }
             ];
 
-            $scope.select = $scope.array[0];
+            $scope.select3 = $scope.array[0];
 
-            
-$scope.get = function (item) {
+            $scope.get = function (item) {
                 console.log(item);
             }
         }]);
