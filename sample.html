@@ -10,8 +10,9 @@
 
         <div class="col-md-3">
             <mdb-select ng-model="select"
-                        data-label="دبیران"
+                        data-label="movies"
                         data-list="array"
+                        data-model="score"
                         ng-change="get(select)"
                         data-bind="name"></mdb-select>
             {{select}}
@@ -28,14 +29,14 @@
 
         app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
             $scope.array = [
-                { name: "ماهر", last: "عاشوری", code: 1 },
-                { name: "محمد", last: "گراییلی", code: 2 },
-                { name: "حسین", last: "رادمان", code: 3 },
-                { name: "علی", last: "رمضانی", code: 4 }
+                { name: "The Shawshank Redemption", score: 10, code: 1 },
+                { name: "The Godfather", score: 9, code: 2 },
+                { name: "The Dark Knight", last: 8, code: 3 },
+                { name: "Pulp Fiction", score: 5, code: 4 },
+                { name: "Fight Club", score: 7, code: 5 }
             ];
 
             $scope.select = $scope.array[0];
-            $scope.select2 = $scope.array[2];
 
             $scope.get = function (item) {
                 console.log(item);
