@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl as self">
+<head>
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Angular-Matrial-Design-Bootstrap-Select-Option/stylesheets/angular-mdb-select.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="col-md-3">
+            <mdb-select ng-model="select"
+                        data-label="دبیران"
+                        data-list="array"
+                        ng-change="get(select)"
+                        data-bind="name"></mdb-select>
+            {{select}}
+
+            <hr/>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="Angular-Matrial-Design-Bootstrap-Select-Option/javascripts/angular-mdb-select.min.js"></script>
+    <script>
+        var app = angular.module("app", ["angularMdbSelect"]);
+
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.array = [
+                { name: "ماهر", last: "عاشوری", code: 1 },
+                { name: "محمد", last: "گراییلی", code: 2 },
+                { name: "حسین", last: "رادمان", code: 3 },
+                { name: "علی", last: "رمضانی", code: 4 }
+            ];
+
+            $scope.select = $scope.array[0];
+            $scope.select2 = $scope.array[2];
+
+            $scope.get = function (item) {
+                console.log(item);
+            }
+        }]);
+    </script>
+</body>
+</html>
