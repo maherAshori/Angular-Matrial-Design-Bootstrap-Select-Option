@@ -1,4 +1,4 @@
-﻿.mdb-select {
+.mdb-select {
     position: relative;
 }
 
@@ -31,19 +31,19 @@
         width: 100%;
         margin: 0;
         height: 0;
-        bottom: -200%;
+        top: 100%;
         padding: 0;
         overflow: hidden;
         position: absolute;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-        transition: bottom 0.5s;
+        transition: top 0.5s;
     }
 
     .mdb-select.open ul {
-        transition: bottom 0.5s;
+        transition: top 0.5s;
         height: auto;
         z-index: 1;
-        bottom: -135%;
+        top: 25px;
     }
 
     .mdb-select ul li {
