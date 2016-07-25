@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Angular-matrial-design-bootstrap-select-option by maherAshori</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Angular-matrial-design-bootstrap-select-option</h1>
+        <h2>Change your select options style</h2>
+        <a href="https://github.com/maherAshori/Angular-Matrial-Design-Bootstrap-Select-Option" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="angular-matrial-design-bootstrap-select-option" class="anchor" href="#angular-matrial-design-bootstrap-select-option" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Angular-Matrial-Design-Bootstrap-Select-Option</h1>
+
+<p>Change your select options style</p>
+
+<h1>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use it</h1>
+
+<div class="highlight highlight-source-js"><pre>  <span class="pl-k">var</span> app <span class="pl-k">=</span> <span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">"</span>app<span class="pl-pds">"</span></span>, [<span class="pl-s"><span class="pl-pds">"</span>angularMdbSelect<span class="pl-pds">"</span></span>]);
+
+  <span class="pl-smi">$scope</span>.<span class="pl-smi">array</span> <span class="pl-k">=</span> [
+    { name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>hello<span class="pl-pds">"</span></span>, last<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>world<span class="pl-pds">"</span></span>, code<span class="pl-k">:</span> <span class="pl-c1">1</span> },
+  ];</pre></div>
+
+<h1>
+<a id="help" class="anchor" href="#help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>help:</h1>
+
+<p>see a example in browser console, select option not work when use help</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">help</span>=<span class="pl-s"><span class="pl-pds">"</span>?<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="ng-model-required" class="anchor" href="#ng-model-required" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ng-model: required</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="data-list-array" class="anchor" href="#data-list-array" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>data-list: array</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">data-list</span>=<span class="pl-s"><span class="pl-pds">"</span>array<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="data-label-string" class="anchor" href="#data-label-string" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>data-label: string</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">data-list</span>=<span class="pl-s"><span class="pl-pds">"</span>array<span class="pl-pds">"</span></span> <span class="pl-e">data-label</span>=<span class="pl-s"><span class="pl-pds">"</span>label name<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="data-bind" class="anchor" href="#data-bind" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>data-bind:</h1>
+
+<p>string-&gt; bind one of object params
+not work when use data-multi-bind</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">data-list</span>=<span class="pl-s"><span class="pl-pds">"</span>array<span class="pl-pds">"</span></span> <span class="pl-e">data-label</span>=<span class="pl-s"><span class="pl-pds">"</span>label name<span class="pl-pds">"</span></span> <span class="pl-e">data-bind</span>=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="data-multi-bind" class="anchor" href="#data-multi-bind" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>data-multi-bind:</h1>
+
+<p>string array-&gt; bind more then one of object params</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">data-list</span>=<span class="pl-s"><span class="pl-pds">"</span>array<span class="pl-pds">"</span></span> <span class="pl-e">data-label</span>=<span class="pl-s"><span class="pl-pds">"</span>label name<span class="pl-pds">"</span></span> <span class="pl-e">data-multi-bind</span>=<span class="pl-s"><span class="pl-pds">"</span>['name','last','code']<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="data-model" class="anchor" href="#data-model" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>data-model:</h1>
+
+<p>string -&gt; bind one of object params
+removeable</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">mdb</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>select<span class="pl-pds">"</span></span> <span class="pl-e">data-list</span>=<span class="pl-s"><span class="pl-pds">"</span>array<span class="pl-pds">"</span></span> <span class="pl-e">data-label</span>=<span class="pl-s"><span class="pl-pds">"</span>label name<span class="pl-pds">"</span></span> <span class="pl-e">data-multi-bind</span>=<span class="pl-s"><span class="pl-pds">"</span>['name','last','code']<span class="pl-pds">"</span></span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>name OR last OR code<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">mdb</span><span class="pl-e">-select</span>&gt;</pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/maherAshori/Angular-Matrial-Design-Bootstrap-Select-Option/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/maherAshori/Angular-Matrial-Design-Bootstrap-Select-Option/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/maherAshori/Angular-Matrial-Design-Bootstrap-Select-Option"></a> is maintained by <a href="https://github.com/maherAshori">maherAshori</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
