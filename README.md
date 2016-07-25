@@ -48,5 +48,5 @@ string array-> bind more then one of object params
 string -> bind one of object params
 removeable
 ```html
-<mdb-select ng-model="select" data-list="array" data-label="label name" data-multi-bind="['name','last','code']" ng-model="name OR last OR code"></mdb-select>
+<mdb-select ng-model="select" data-list="array" data-label="label name" data-multi-bind="['name','last','code']" data-model="name OR last OR code"></mdb-select>
 ```
