@@ -1,4 +1,4 @@
-.mdb-select {
+﻿.mdb-select {
     position: relative;
 }
 
@@ -25,6 +25,11 @@
 
     .mdb-select.open label {
         color: #4285F4;
+    }
+
+    .mdb-select ul li.active{
+        background: #ededed;
+        border: solid 1px #ddd;
     }
 
     .mdb-select ul {
