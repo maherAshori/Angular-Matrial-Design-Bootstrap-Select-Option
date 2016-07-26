@@ -14,7 +14,7 @@ angularMdbSelect.directive("mdbSelect", ["$filter", function ($filter) {
         template: "<div ng-mouseleave=\"change = false\" ng-click=\"multiple ? change = true:change = !change\" ng-class=\"{'open': change}\" class=\"mdb-select\">" +
             "<label ng-bind-html=\"label | to_trusted\"></label>" +
             "<div ng-show=\"bind === undefined && multiBind === undefined\" class=\"active\" ng-bind=\"'undefined'\"></div>" +
-            "<div ng-hide=\"bind === undefined && multiBind === undefined\" class=\"active\">{{activeOption}} <small>{{languages[lang].multiple}}</small></div>" +
+            "<div ng-hide=\"bind === undefined && multiBind === undefined\" class=\"active\">{{activeOption}} <small ng-if=\"multiple\">{{languages[lang].multiple}}</small></div>" +
                 "<ul ng-hide=\"bind === undefined && multiBind === undefined\">" +
                     "<li ng-if=\"multiple === undefined\" ng-repeat=\"item in list\" ng-click=\"select(item)\" ng-hide=\"selected === item\">" +
                         "<span ng-if=\"multiBind === undefined\" ng-bind=\"item[bind]\"></span>" +
