@@ -1,12 +1,18 @@
-﻿//angular mdb select v 1.0.0
+﻿//angular mdb select v 1.0.1
 var angularMdbSelect = angular.module("angularMdbSelect", []);
+
+angularMdbSelect.filter("to_trusted", ["$sce", function ($sce) {
+    return function(text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
 
 angularMdbSelect.directive("mdbSelect", function () {
     return {
         restric: "E",
         require: "^ngModel",
         template: "<div ng-mouseleave=\"change = false\" ng-click=\"change = !change\" ng-class=\"{'open': change}\" class=\"mdb-select\">" +
-            "<label ng-bind=\"label\"></label>" +
+            "<label ng-bind-html=\"label | to_trusted\"></label>" +
             "<div ng-show=\"bind === undefined && multiBind === undefined\" class=\"active\" ng-bind=\"'undefined'\"></div>" +
             "<div ng-hide=\"bind === undefined && multiBind === undefined\" class=\"active\" ng-bind=\"activeOption\"></div>" +
                 "<ul ng-hide=\"bind === undefined && multiBind === undefined\">" +
@@ -25,6 +31,7 @@ angularMdbSelect.directive("mdbSelect", function () {
             help: "@?"
         },
         link: function (scope, element, attrs, ngModel) {
+            console.log(scope.label)
             if (!angular.isUndefined(scope.help)) {
                 console.warn("******mdbSelect Helper****** \n");
                 console.info("Example:" +
